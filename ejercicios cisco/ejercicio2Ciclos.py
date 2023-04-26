@@ -8,15 +8,15 @@ contraseña = input("Establezca su contraseña: ")
 confContraseña = input("Digite su contraseña: ")
 if confContraseña == contraseña:
     print(f"Contraseña correcta bienvenido {nombre}")
-intentos = 4
+intentos = 3
 
 while confContraseña != contraseña:
-    intentos -=1
     print(f"La contraseña no coincide solo posee {intentos} intentos")
-    confContraseña = input("Digite su contraseña: ")
-    if intentos < 1:
+    intentos -=1
+    if intentos <0:
         print("Haz agotado todos los intentos")
         break
+    confContraseña = input("Digite su contraseña: ")
     if confContraseña == contraseña:
         print(f"Contraseña correcta bienvenido {nombre}")
         break
