@@ -12,9 +12,10 @@ else:
 while resta != 0:
     if numDos < numUno:
         resta = resta - numDos
-        print("El residuo es : ", resta)
+        print("El resultado de la resta es: ", resta)
     else:
         resta= resta - numUno
-        print("El residuo es : ", resta)
+        print("El resultado de la resta es: ", resta)
     if resta < 0:
+        print(f"El residuo es {resta}")
         break 
