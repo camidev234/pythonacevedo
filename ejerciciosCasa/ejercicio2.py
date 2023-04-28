@@ -1,7 +1,5 @@
 numUno = int(input("Escriba un numero: "))
 numDos = int(input("Escriba un numero: "))
-restaUno = 0
-restaDos = 0
 if numUno < numDos:
     resta = numDos - numUno
     print(f"El resultado de la resta entre el mayor y el menor es: {resta}")
