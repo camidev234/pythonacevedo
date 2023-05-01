@@ -8,8 +8,6 @@ print(
 )
 numero = int(input("Escriba el numero: "))
 
-print(aleatorio)
-
 while numero!=aleatorio:
     numero = int(input("Escriba el numero: "))
     if numero < aleatorio:
