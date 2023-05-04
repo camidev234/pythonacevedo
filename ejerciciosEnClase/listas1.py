@@ -1,14 +1,16 @@
+import math
 import random
 lista=[]
 mayor=0
 menor=1000000
+suma=0
+sum=0
+cont=0
 tam=random.randint(10, 20)
 for i in range(tam):
     num=random.randrange(100)
     lista.append(num)
 print(lista)
-sum=0
-cont=0
 for h in lista:
     sum+=h
     cont+=1
@@ -24,6 +26,8 @@ print(f"El menor es: {menor}")
 for j in lista:
     resta = j - (sum/cont)
     cuadrado = resta **2
-    division = cuadrado / cont
-    print(division)
+    suma+=cuadrado
+    division = suma // cont
+raiz = math.sqrt(division)
+print(f"La desviacion estandar es: {raiz}")
 
