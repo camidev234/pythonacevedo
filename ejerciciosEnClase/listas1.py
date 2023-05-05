@@ -19,7 +19,7 @@ for h in lista:
     if h < menor:
         menor=h
 print(f"La suma es: {sum}")
-print(f"El promedio de la suma es: {sum/cont}")
+print(f"El promedio es: {sum/cont}")
 print(f"El mayoe es: {mayor}")
 print(f"El menor es: {menor}")
 
@@ -31,3 +31,15 @@ for j in lista:
 raiz = math.sqrt(division)
 print(f"La desviacion estandar es: {raiz}")
 
+maxRep=0
+
+for numAct in lista:
+    cont=0
+    for s in lista:
+        if numAct == s:
+            cont+=1
+    if cont > maxRep:
+        maxRep=cont
+        moda=numAct
+   
+print(f"La moda es {moda}")
