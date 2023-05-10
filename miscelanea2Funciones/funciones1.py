@@ -40,26 +40,26 @@ def Menor(lista):
 
 print(Menor(l1))
 
-def ordenDes(lista):
+def ordenAsc(lista):
     for j in range(len(lista)):
         for g in range(j +1, len(lista)):
             if lista[j] >  lista[g]:
                 aux=lista[j]
                 lista[j]=lista[g]
                 lista[g]=aux
-    return f"la lista ordenada en orden descendente: {lista}"
+    return f"la lista ordenada en orden ascendente: {lista}"
 
-print(ordenDes(l1))
+print(ordenAsc(l1))
 
 
-def ordenAsc(lista):
+def ordenDesc(lista):
     for j in range(len(lista)):
         for h in range(j+1, len(lista)):
             if lista[j] < lista[h]:
                 aux= lista[j]
                 lista[j]=lista[h]
                 lista[h]=aux
-    return lista
+    return f"lA Lista en orden descendente: {lista}"
 
-print(ordenAsc(l1))
+print(ordenDesc(l1))
     
