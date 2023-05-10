@@ -63,3 +63,19 @@ def ordenDesc(lista):
 
 print(ordenDesc(l1))
     
+
+def moda(lista):
+    max=0
+    for n in lista:
+        cont=0
+        for o in lista:
+            if n == o:
+                cont+=1
+        if cont > max:
+            max = cont
+            moda1= n
+    if cont == max:
+        return "no hay moda"
+    return f"La moda es {moda1} por que se repitito {max} veces"
+
+print(moda(l1))
