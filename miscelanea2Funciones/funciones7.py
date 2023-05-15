@@ -14,7 +14,7 @@ def hallarFactoriales(lista):
     for j in lista:
         numero=j
         operacion=0
-        for k in range(j-1, 1, -1):
+        for k in range(j-1, 0, -1):
             operacion=j*k
             j=operacion
         j=numero
