@@ -138,4 +138,19 @@ def impares(lista):
     for h in lista:
         if h % 2 !=0:
             imparesCont+=1
+    return imparesCont
+imparesl1 = impares(lista1)
+print(f"La lista uno tiene {imparesl1} impares")
+imparesl2 = impares(lista2)
+print(f"La lista dos tiene {imparesl2} impares")
+
+def maxImpares(impares1, impares2):
+    if impares1 < impares2:
+        return "La lista dos tiene mas impares que la lista uno"
+    elif impares1 > impares2:
+        return "La lista uno tiene mas impares que lista dos"
+    else:
+        return "Ambos tienen la misma cantidad de impares" 
+    
+print(maxImpares(imparesl1, imparesl2))
     
