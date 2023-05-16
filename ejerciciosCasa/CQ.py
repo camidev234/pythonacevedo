@@ -34,14 +34,15 @@ def Cuartil(lista):
         posicion=cuart2
         cuart= (i * (n+1))/4
         cuart2=int(cuart)
-        print(cuart, cuart2)
-        if n % 2 !=0:
-            if m == 1:
-                listaCuartil=lista[ :cuart2]
-                print(f"Cuartil {i} {listaCuartil}")
-            else:
-                listaCuartil=lista[posicion:cuart2]
-                print(f"Cuartil {i} {listaCuartil}")
+        op= (cuart2 + (cuart2-1))/2
+        print(cuart, cuart2, op)
+        
+        if m == 1:
+            listaCuartil=lista[ :cuart2]
+            print(f"Cuartil {i} {listaCuartil}")
+        else:
+            listaCuartil=lista[posicion:cuart2]
+            print(f"Cuartil {i} {listaCuartil}")
     
             
         i+=1
