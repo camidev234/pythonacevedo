@@ -8,7 +8,7 @@ def llenarLista(tamaño):
 listado = llenarLista(lon)
 print(listado)
 
-listado = [1,2,3,4,5,6,7,7,8,8,10,11]
+listado = [1,2,3,4,5,6,6,7,8,8,10,12,13,14,15,16,17]
 
 
 def ordenAsc(lista):
@@ -22,28 +22,38 @@ def ordenAsc(lista):
 
 print(ordenAsc(listado))
 
-def Cuartil(lista):
-    listaCuartil=[]
-    cuart2=0
-    cuart=0
-    posicion=0
-    op=0
-    op2=0
-    n=len(lista)
-    for m in range(1,4):
-        posicion=op2
-        cuart= (m * (n+1))/4
-        print(cuart)
-        cuart2=int(cuart)
-        o=cuart2+1
-        op=(cuart+o)/2
-        op2=int(op)
-        print(op2)
-        if m == 1:
-            listaCuartil=lista[ :op2]
-            print(f"Cuartil {m} {listaCuartil}")
-        else:
-            listaCuartil=lista[posicion:op2]
-            print(f"Cuartil {m} {listaCuartil}")
+# def Cuartil(lista):
+#     listaCuartil=[]
+#     cuart2=0
+#     cuart=0
+#     posicion=0
+#     op=0
+#     op2=0
+#     n=len(lista)
+#     for m in range(1,4):
+#         posicion=op2
+#         cuart= (m * (n+1))/4
+#         print(cuart)
+#         cuart2=int(cuart)
+#         o=cuart2+1
+#         op=(cuart+o)/2
+#         op2=int(op)
+#         print(op2)
+#         if m == 1:
+#             listaCuartil=lista[ :op2]
+#             print(f"Cuartil {m} {listaCuartil}")
+#         else:
+#             listaCuartil=lista[posicion:op2]
+#             print(f"Cuartil {m} {listaCuartil}")
 
-Cuartil(listado)
+# Cuartil(listado)
+formula=0
+n = len(listado)
+listaCuartil=[]
+for k in range(1, 4):
+    if len(listado) % 2!=0:
+        formula=(k*(n+1)) / 4
+        conv=int(formula)
+        cuartil= listado[conv]
+        print(f"posicion cuartil {k} {conv} valor: {cuartil}")
+        
