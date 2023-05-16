@@ -1,5 +1,5 @@
 import random
-lon = random.randrange(30, 35)
+lon = random.randrange(200, 2500)
 def llenarLista(tamaño):
     lista=[]
     lista=[random.randint(100, 500) for i in range(tamaño)]
@@ -8,8 +8,7 @@ def llenarLista(tamaño):
 listado = llenarLista(lon)
 print(listado)
 
-listado = [1,2,3,4,5,6,6,7,8,8,10,12,13,14,15,16,17]
-
+# listado = [1,2,3,4,5,6,7,8,9,10,11,12,13]
 
 def ordenAsc(lista):
     for j in range(len(lista)):
@@ -22,38 +21,65 @@ def ordenAsc(lista):
 
 print(ordenAsc(listado))
 
-# def Cuartil(lista):
-#     listaCuartil=[]
-#     cuart2=0
-#     cuart=0
-#     posicion=0
-#     op=0
-#     op2=0
-#     n=len(lista)
-#     for m in range(1,4):
-#         posicion=op2
-#         cuart= (m * (n+1))/4
-#         print(cuart)
-#         cuart2=int(cuart)
-#         o=cuart2+1
-#         op=(cuart+o)/2
-#         op2=int(op)
-#         print(op2)
-#         if m == 1:
-#             listaCuartil=lista[ :op2]
-#             print(f"Cuartil {m} {listaCuartil}")
-#         else:
-#             listaCuartil=lista[posicion:op2]
-#             print(f"Cuartil {m} {listaCuartil}")
+def cuartil(lista):
+    formula=0
+    n = len(lista)
+    listaCuartil=[]
+    conv=0
+    # posicionInicial=0
+    for k in range(1, 4):
+        if len(lista) % 2!=0:
+            # posicionInicial=conv
+            formula=(k*(n+1)) / 4
+            conv=round(formula)
+            pos=lista[conv-1]
+            print(f"Q{k} = posicion {formula} valor en lista {pos}")
+            listaCuartil.append(formula)
+            print(listaCuartil)
+            # if k == 1:
+            #     listaCuartil=lista[ :conv-1]
+            #     listaCuartil.append(formula)
+            #     print(f"Cuartil {k} {listaCuartil}")
+            # elif k == 2:
+            #     listaCuartil = lista[posicionInicial-1:conv]
+            #     print(f"Cuartil {k} {listaCuartil}")
+            # else:
+            #     listaCuartil = lista[posicionInicial:conv]
+            #     print(f"Cuartil {k} {listaCuartil}")
+        else:
+            formula = (k*n)/4
+            conv=round(formula)
+            pos= lista[conv]
+            print(f"Q{k} = {formula} en lista {pos}")
+            listaCuartil.append(formula)
+            print(listaCuartil)
+            
+    return "Fin de procedimiento de cuartiles"
+            
+print(cuartil(listado))
 
-# Cuartil(listado)
-formula=0
-n = len(listado)
-listaCuartil=[]
-for k in range(1, 4):
-    if len(listado) % 2!=0:
-        formula=(k*(n+1)) / 4
-        conv=int(formula)
-        cuartil= listado[conv]
-        print(f"posicion cuartil {k} {conv} valor: {cuartil}")
+def quintil(lista):
+    formula=0
+    n = len(lista)
+    listaCuartil=[]
+    conv=0
+    # posicionInicial=0
+    for k in range(1, 5):
+        if len(lista) % 2!=0:
+            # posicionInicial=conv
+            formula=(k*(n+1)) / 5
+            conv=round(formula)
+            pos=lista[conv-1]
+            print(f"k{k} = posicion {formula} valor en lista {pos}")
+            listaCuartil.append(formula)
+            print(listaCuartil)
+        else:
+            formula = (k*n)/5
+            conv=round(formula)
+            print(f"k{k} = {formula}")
+            listaCuartil.append(formula)
+            print(listaCuartil)
+
+    return "Fin de procedimiento de quintiles"
+print(quintil(listado))
         
