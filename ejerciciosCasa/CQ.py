@@ -8,7 +8,7 @@ def llenarLista(tamaño):
 listado = llenarLista(lon)
 print(listado)
 
-# listado = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+listado = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,29]
 
 def ordenAsc(lista):
     for j in range(len(lista)):
@@ -28,12 +28,12 @@ def cuartil(lista):
     conv=0
     # posicionInicial=0
     for k in range(1, 4):
-        if len(lista) % 2!=0:
+        if len(lista) % 2!=0 or len(lista) % 2 == 0:
             # posicionInicial=conv
-            formula=(k*(n+1)) / 4
+            formula=k*(n+1) / 4
             conv=round(formula)
             pos=lista[conv-1]
-            print(f"Q{k} = posicion {formula} valor en lista {pos}")
+            print(f"Q{k} = {formula} valor en lista {pos}")
             listaCuartil.append(formula)
             print(listaCuartil)
             # if k == 1:
@@ -46,13 +46,6 @@ def cuartil(lista):
             # else:
             #     listaCuartil = lista[posicionInicial:conv]
             #     print(f"Cuartil {k} {listaCuartil}")
-        else:
-            formula = (k*n)/4
-            conv=round(formula)
-            pos= lista[conv]
-            print(f"Q{k} = {formula} en lista {pos}")
-            listaCuartil.append(formula)
-            print(listaCuartil)
             
     return "Fin de procedimiento de cuartiles"
             
@@ -65,18 +58,12 @@ def quintil(lista):
     conv=0
     # posicionInicial=0
     for k in range(1, 5):
-        if len(lista) % 2!=0:
+        if len(lista) % 2!=0 or len(lista) % 2 == 0:
             # posicionInicial=conv
             formula=(k*(n+1)) / 5
             conv=round(formula)
             pos=lista[conv-1]
-            print(f"k{k} = posicion {formula} valor en lista {pos}")
-            listaCuartil.append(formula)
-            print(listaCuartil)
-        else:
-            formula = (k*n)/5
-            conv=round(formula)
-            print(f"k{k} = {formula}")
+            print(f"k{k} = {formula} valor en lista {pos}")
             listaCuartil.append(formula)
             print(listaCuartil)
 
