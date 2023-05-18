@@ -58,7 +58,7 @@ c1,c2,c3,c4= cuartil(listado,cuartil1,cuartil2,cuartil3,cuartil4)
 
 print(f"Ultima {c4}")
 
-def promCuartil(lista):
+def prom(lista):
     sum=0
     long = len(lista)
     for h in lista:
@@ -66,46 +66,78 @@ def promCuartil(lista):
     promedio= sum/long
     return promedio
 
-print(f"El promedio de la lista 1 es:", promCuartil(c1))
-print(f"El promedio de la lista 2 es:", promCuartil(c2))
-print(f"El promedio de la lista 3 es:", promCuartil(c3))
-print(f"El promedio de la lista 3 es:", promCuartil(c4))
+print(f"El promedio de la primera parte de la lista es:", prom(c1))
+print(f"El promedio de la segunda parte de la lista es:", prom(c2))
+print(f"El promedio de la tercera parte de la lista es:", prom(c3))
+print(f"El promedio de la cuarta parte de la lista es:", prom(c4))
 
 
 
-def quintil(lista):
+def quintil(lista, lista1, lista2, lista3,lista4, lista5):
     formula=0
     n = len(lista)
-    listaCuartil=[]
+    listaQuintil=[]
+    redondeo=0
     for k in range(1, 5):
         if len(lista) % 2!=0 or len(lista) % 2 == 0:
+            pos2=redondeo
             formula=(k*(n+1)) / 5
             redondeo= round(formula)
             r2=redondeo+1
             promedio= (redondeo+r2)/2
-            print(f"Promedio {promedio}") 
             posicion=lista[redondeo-1]  
-            print(f"k{k} = {formula} valor {posicion}")
-            listaCuartil.append(formula)
-            print(listaCuartil)
+            if k == 1:
+                listaQuintil=lista[ :redondeo]
+                print(f"k {k} {listaQuintil}")
+                lista1=listaQuintil
+            elif k == 2:
+                listaQuintil=lista[pos2:redondeo]
+                print(f"k {k} {listaQuintil}")
+                lista2=listaQuintil
+            elif k == 3:
+                listaQuintil=lista[pos2:redondeo]
+                print(f"k {k} {listaQuintil}")
+                lista3=listaQuintil
+            elif k == 4:
+                listaQuintil=lista[pos2:redondeo]
+                print(f"k {k} {listaQuintil}")
+                lista4=listaQuintil
+                lista5=lista[redondeo:]
+                
+            print(f"k{k} = {formula} valor: {posicion}")
+                
+    return lista1,lista2,lista3,lista4,lista5
 
-    return "Fin de procedimiento de quintiles"
-print(quintil(listado))
+quintil1=[]
+quintil2=[]
+quintil3=[]
+quintil4=[]
+quintil5=[]
+
+k1,k2,k3,k4,k5 = quintil(listado, quintil1,quintil2,quintil3,quintil4,quintil5)
+print(f"K5 {k5}")
+
+print(f"El promedio de la primera parte de la lista es:", prom(k1))
+print(f"El promedio de la segunda parte de la lista es:", prom(k2))
+print(f"El promedio de la tercera parte de la lista es:", prom(k3))
+print(f"El promedio de la cuarta parte de la lista es:", prom(k4))
+print(f"El promedio de la quinta parte de la lista es: ",prom(k5) )
 
 
-# def buscarCuartil(cuartil, lista):
-#     formula=0
-#     n = len(lista)
-#     if cuartil > 3:
-#         print(f"El cuartil {cuartil} no existe")
-#     else:
-#         formula = cuartil*(n+1)/4
-#         redondeo= round(formula)
-#         r2=redondeo+1
-#         promedio= (redondeo+r2)/2 
-#         posicion=lista[redondeo-1]   
+def buscarCuartil(cuartil, lista):
+    formula=0
+    posicion=0
+    n = len(lista)
+    if cuartil > 3:
+        return f"El cuartil {cuartil} no existe"
+    else:
+        formula = cuartil*(n+1)/4
+        redondeo= round(formula)
+        r2=redondeo+1
+        promedio= (redondeo+r2)/2 
+        posicion=lista[redondeo-1]   
 
-#     return f"El cuartil {cuartil} es {formula} valor: {posicion}"
+    return f"El cuartil {cuartil} es {formula} valor: {posicion}"
 
-# print(buscarCuartil(int(input("Escriba el cuartil que desea buscar: ")), listado))
+print(buscarCuartil(int(input("Escriba el cuartil que desea buscar: ")), listado))
         
