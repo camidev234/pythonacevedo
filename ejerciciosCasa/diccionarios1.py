@@ -20,4 +20,3 @@ def searchKey(key, diction):
         return f"El valor asociado a {key} es --> {s} y es de tipo {t}"
     
 print(searchKey(input("Escriba la clave a buscar: "), dictionary))
-

@@ -10,8 +10,7 @@ def spen(reps, clave, valor, diccionario):
         valor= input("Escriba un valor: ")
         diccionario.update({clave:valor})
         if c == reps:
-            break
-           
+            break          
     return True
 
 def enes(reps, clave, valor, diccionario):
