@@ -42,6 +42,7 @@ def sepDic(diccionario):
     print()
     return True"""
     #FORMA 3
+    #.
     valores=[]
     claves=[]
     print("---------------------------------------------------------------")
