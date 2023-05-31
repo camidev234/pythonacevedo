@@ -33,6 +33,11 @@ def sepDic(diccionario):
     return tc, tv
 
 
+def deleteKv(diccionario, claveOvalor):
+    del diccionario[claveOvalor]
+    return claveOvalor
+
+
 
 
 
