@@ -32,11 +32,19 @@ def sepDic(diccionario):
     
     return tc, tv
 
+# borrar un elemento con su clave y valor
 
-def deleteKv(diccionario, claveOvalor):
-    del diccionario[claveOvalor]
-    return claveOvalor
+def deleteKv(diccionario, clave):
+    del diccionario[clave]
+    return clave
 
+# actualizar el valor de una clave
+
+def updateDictValue(diccionario, key, newValue):
+    diccionario[key] = newValue
+    return diccionario[key]
+
+# 
 
 
 
