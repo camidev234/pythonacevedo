@@ -36,7 +36,7 @@ def sepDic(diccionario):
 
 def deleteKv(diccionario, clave):
     del diccionario[clave]
-    return clave
+    return clave 
 
 # actualizar el valor de una clave
 
