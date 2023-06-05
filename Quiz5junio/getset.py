@@ -41,10 +41,12 @@ class Persona:
         
     
     def updateCurso(self, curso, nuevocurso):
-        for i in range(len(self.__curso)):
-            if self.__curso[i] == curso:
-                self.__curso[i] = nuevocurso
-    
+        if curso in self.__curso:
+            for i in range(len(self.__curso)):
+                if self.__curso[i] == curso:
+                    self.__curso[i] = nuevocurso
+        else:
+            print( f"El curso {curso} no esa en la lista.")
         
 
 personaUno = Persona("Camilo", 300330)
@@ -59,8 +61,11 @@ personaUno.addCursos("Geometria")
 print(personaUno.getCursos())
 print(personaUno.buscarCurso("Geografia"))
 personaUno.deleteCurso("español")
+print(personaUno.buscarCurso("español"))
 print(personaUno.getCursos())
 personaUno.updateCurso("ingles", "sistemas")
+personaUno.updateCurso("sistemas", "etica")
+personaUno.updateCurso("sistemas", "ingles")
 print(personaUno.getCursos())
 print(personaUno.getValues())
 
