@@ -41,13 +41,10 @@ class Persona:
         
     
     def updateCurso(self, curso, nuevocurso):
-        pos = 0
         for i in range(len(self.__curso)):
-            pos+=1
             if self.__curso[i] == curso:
-                self.__curso[pos-1] = nuevocurso
-            if self.__curso[i] == self.__curso[-1]:
-                self.__curso[-1] = nuevocurso
+                self.__curso[i] = nuevocurso
+    
         
 
 personaUno = Persona("Camilo", 300330)
@@ -63,7 +60,7 @@ print(personaUno.getCursos())
 print(personaUno.buscarCurso("Geografia"))
 personaUno.deleteCurso("español")
 print(personaUno.getCursos())
-personaUno.updateCurso("trigonometria", "sistemas")
+personaUno.updateCurso("ingles", "sistemas")
 print(personaUno.getCursos())
 print(personaUno.getValues())
 
