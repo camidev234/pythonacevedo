@@ -13,6 +13,12 @@ class Persona:
             if i not in Persona.listaCursos:
                 Persona.listaCursos.append(i)
 
+        # for i in self.__curso:
+        #     if i in Persona.listaCursos:
+        #         True
+        #     else:
+        #         Persona.listaCursos.append(i)
+
     def getCursos(self):
         return self.__curso
                  
