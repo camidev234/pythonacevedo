@@ -30,8 +30,10 @@ class Producto:
         
     def getPrecio(self):
         return self.__precio
+
     
     def setPrecio(self, precio):
         self.__precio = precio
+        
         
     

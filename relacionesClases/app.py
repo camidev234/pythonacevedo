@@ -11,20 +11,30 @@ prodDos = Producto(243, "Iphone 14", "Movil", 5000000)
 clienteUno.agregarProducto(prodUno)
 clienteUno.agregarProducto(prodDos)
 print(clienteUno.getProductos())
+clienteUno.Aplicardescuentos()
+print(prodUno.getPrecio())
+print(prodDos.getPrecio())
+
 
 # Con cliente tipo empresa
 
 empresaUno = Empresa("Coca Cola", 42478, 294924)
-p1 = Producto(284928, "Camion", "Automovil", 2984949292)
+p1 = Producto(284928, "Camion", "Automovil", 1160000)
 p2 = Producto(25777, "Receta Secreta", "Receta", 38493849)
 empresaUno.agregarProducto(p1)
 empresaUno.agregarProducto(p2)
-print(empresaUno.getProductos())
+empresaUno.Aplicardescuentos()
+print(p2.getPrecio())
+
+
 
 #Usando Composicion
 
 user = Individual("Andres", 101310, "Beltran", "andres@gmail.com", 3003130618)
 user.componerProducto(2743, "Portatil Lenovo", "Portatil", 2450000)
-print(user.getProductos())
+user.descuentoCompuesto()
+
+
+
 
 
