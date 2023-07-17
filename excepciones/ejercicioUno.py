@@ -4,7 +4,7 @@ import math
 try:
     print("""
     1. Suma
-    2-. Restemelo
+    2. Resta
     """)
 
     op = float(input("Ingrese la operacion que desea realizar: "))
@@ -31,5 +31,14 @@ except Exception as e:
     print(f"Error: {e}")
 except:
     print("Hubo un error durante la ejecucion.")
+
+
+
+
+#FUNCION CUADRATICA SIN EXCEPCIONES
+
+
+
+
 
 
