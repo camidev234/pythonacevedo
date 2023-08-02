@@ -1,0 +1,4 @@
+# aplicacion personas
+
+personas = []
+
