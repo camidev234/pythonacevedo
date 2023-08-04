@@ -1,3 +1,14 @@
+------------------------------------
 El tipo de documento que mas veces se repitio es ti, Por ende hay mas Menores de edad
-En los primeros 1000 registros presentaron la prueba mas hombres con un total de: 95
-El departamento con mas estudiantes que presentaron la prueba fue: 11
+En los primeros 100 registros presentaron la prueba mas hombres con un total de: 95
+El departamento con mas estudiantes que presentaron la prueba fue: Bogotá D.C.
+El promedio de habitaciones por familia de un estudiante es de: 3
+La desviacion estandar es: 51.54609587543949
+------------------------------------
+------------------------------------
+El tipo de documento que mas veces se repitio es ti, Por ende hay mas Menores de edad
+En los primeros 100 registros presentaron la prueba mas hombres con un total de: 95
+El departamento con mas estudiantes que presentaron la prueba fue: Bogotá D.C.
+El promedio de habitaciones por familia de un estudiante es de: 3
+La desviacion estandar es: 51.54609587543949
+------------------------------------

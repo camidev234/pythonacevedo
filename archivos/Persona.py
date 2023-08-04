@@ -13,7 +13,7 @@ class Persona:
     def getCodDepartamento(self):
         return self.__codDepartamento
     
-    def getPerclectura(self):
+    def getPuntaje(self):
         return self.__perclectura
     
     def getGenero(self):
