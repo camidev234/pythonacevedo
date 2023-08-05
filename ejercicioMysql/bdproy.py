@@ -4,6 +4,6 @@ db=mysql.connector.connect(
     host="localhost",
     user="root",
     password="",
-    database="pruebaProyecto2"
+    database="ensayoProyecto"
 )
 cursor=db.cursor()
