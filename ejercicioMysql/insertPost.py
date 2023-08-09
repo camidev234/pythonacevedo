@@ -98,8 +98,25 @@ def actualizarDatos():
         cursor.execute(query, vals)
         db.commit()
         print("Datos actualizados con exito.")
-actualizarDatos()
+while True:
+    p = input("Desea actualizar datos: y/n: ")
+    if p == "y" or p =="Y":
+        actualizarDatos()
+    else:
+        break
+
+def borrarDatos():
+    id = int(input("Digite el id de la persona que desea eliminar de la BD: "))
+    consulta = "DELETE FROM persona WHERE id_persona = %s"
+    vls = (id,)
+    cursor.execute(consulta, vls)
+    db.commit()
+    print(cursor)
+    print("Eliminado con exito.")
                 
-    
-
-
+while True:
+    p = input("Desea borrar datos: y/n: ")
+    if p == "y" or p =="Y":
+        borrarDatos()
+    else:
+        break
